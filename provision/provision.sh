@@ -74,12 +74,13 @@ cp /provision/service/queue.conf /etc/supervisord/queue.conf
 # Node and npm
 # ------------------------------------------------------------------------------
 
-curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 chmod +x nodesource_setup.sh
 ./nodesource_setup.sh
 apt-get -y install nodejs
 apt-get -y install build-essential
 rm ./nodesource_setup.sh
+npm install -g npm@latest
 
 # ------------------------------------------------------------------------------
 # Wkhtmltopdf
