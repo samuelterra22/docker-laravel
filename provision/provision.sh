@@ -20,24 +20,35 @@ cp /provision/conf/nginx/production.template /etc/nginx/sites-available/producti
 echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # ------------------------------------------------------------------------------
+# Software properties
+# ------------------------------------------------------------------------------
+
+apt-get -y install software-properties-common
+
+# ------------------------------------------------------------------------------
 # PHP7
 # ------------------------------------------------------------------------------
 
+# add repository
+
+add-apt-repository ppa:ondrej/php -y &> /dev/null
+apt-get update
+
 # install PHP
-apt-get -y install php-fpm php-cli
+apt-get -y install php7.2-fpm php7.2-cli
 cp /provision/service/php-fpm.conf /etc/supervisord/php-fpm.conf
 mkdir -p /var/run/php
 
-apt-get -y install php-mbstring php-xml php-mysqlnd php-curl
+apt-get -y install php7.2-mbstring php7.2-xml php7.2-mysqlnd php7.2-curl php7.2-xml php7.2-common php7.2-gd php7.2-bz2
 
 # disable 'daemonize' in php-fpm (because we use supervisor instead)
-sed -i -e "s/;daemonize\s*=\s*yes/daemonize = no/g" /etc/php/7.0/fpm/php-fpm.conf
+sed -i -e "s/;daemonize\s*=\s*yes/daemonize = no/g" /etc/php/7.2/fpm/php-fpm.conf
 
 # ------------------------------------------------------------------------------
 # XDebug (installed but not enabled)
 # ------------------------------------------------------------------------------
 
-apt-get -y install php-xdebug
+apt-get -y install php7.2-xdebug
 phpdismod xdebug
 phpdismod -s cli xdebug
 
