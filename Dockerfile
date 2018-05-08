@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Docker provisioning script for the docker-laravel web server stack
 #
-# 	e.g. docker build -t samuelterra22/docker-laravel:version .
+# 	e.g. docker build -t samuelterra22/docker-laravel.
 # ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
