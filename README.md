@@ -40,7 +40,7 @@ Running a container
 
 **1.** Download the public Docker image from Dockerhub:
 
-		docker pull mtmacdonald/docker-laravel:version
+		docker pull samuelterra22/docker-laravel:version
 
 **2.** Run the Docker image as a new Docker container:
 
