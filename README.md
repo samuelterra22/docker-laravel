@@ -4,7 +4,7 @@ Ubuntu Docker container for Laravel web applications
 Docker-laravel is a LEMP image for running
 [Laravel](https://github.com/laravel/laravel) web applications.
 
-It extends [docker-base](https://github.com/mtmacdonald/docker-base), which
+It extends [docker-base](https://github.com/samuelterra22/docker-base), which
 contains [Supervisor](http://supervisord.org) for process supervision, and other
 basic utilities. It is inspired by
 [mtmacdonald/docker-laravel](https://github.com/mtmacdonald/docker-laravel).
@@ -49,7 +49,7 @@ Running a container
 		-v /home/app:/share \
 		--restart=always \
 		--name=appname \
-		mtmacdonald/docker-laravel:version
+		samuelterra22/docker-laravel:version
 
 Replace '/home/app' with the path to the Laravel application's root directory in
 the host. This directory is a shared volume and so can be used to access the
