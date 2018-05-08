@@ -8,7 +8,7 @@
 # Start with a base image
 # ------------------------------------------------------------------------------
 
-FROM samuelterra22/docker-base
+FROM samuelterra22/docker-base:1.0.0
 
 MAINTAINER Samuel Terra <samuelterra22@hotmail.com>
 

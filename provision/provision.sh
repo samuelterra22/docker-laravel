@@ -59,7 +59,7 @@ apt-get -y install mariadb-server pwgen
 cp /provision/service/mariadb.conf /etc/supervisord/mariadb.conf
 
 # MariaDB seems to have problems starting if these permissions are not set:
-mkdir /var/run/mysqld
+mkdir -p /var/run/mysqld
 chmod 777 /var/run/mysqld
 
 # ------------------------------------------------------------------------------
