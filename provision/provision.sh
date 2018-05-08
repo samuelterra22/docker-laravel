@@ -89,7 +89,7 @@ npm install -g npm@latest
 # ------------------------------------------------------------------------------
 
 apt-get -y install libxrender1
-curl -sL http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz -o wkhtmltopdf.tar.xz
+curl -sL http://downloads.wkhtmltopdf.org/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz -o wkhtmltopdf.tar.xz
 tar xf wkhtmltopdf.tar.xz
 mv wkhtmltox/bin/wkhtmltopdf /usr/bin/wkhtmltopdf
 rm -rf ./wkhtmlto*
